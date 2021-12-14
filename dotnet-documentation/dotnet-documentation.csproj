@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>DaanV2.Documentation</RootNamespace>
+    <StartupObject>DaanV2.Documentation.Program</StartupObject>
+  </PropertyGroup>
+
+</Project>
