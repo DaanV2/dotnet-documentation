@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 
 namespace DaanV2.Documentation {
     public partial class Context {
@@ -12,7 +11,9 @@ namespace DaanV2.Documentation {
             var Out = new Context();
 
             if (args.Length == 2) {
-                Out.OutputFolder = args[0];
+                Out.SetOutputFolder(args[0]);
+                Out.AddInputFile(args[1]);
+                return Out;
             }
 
 
@@ -22,18 +23,27 @@ namespace DaanV2.Documentation {
                 switch (arg) {
                     case "-f":
                     case "--file":
-                        String Filepath = args[I + 1];
-
-                        if (!Path.IsPathRooted(Filepath))
-                            Filepath = Path.GetFullPath(Filepath);
-
-                        Out.DocumentationFiles.Add(Filepath);
+                        Out.AddInputFile(args[I + 1]);
                         break;
 
-                    case
+                    case "-o":
+                    case "--output":
+                        Out.SetOutputFolder(args[I + 1]);
+                        break;
 
+                    default:
+                        if (I == 0) {
+                            Out.SetOutputFolder(arg);
+                        }
+                        else {
+                            Out.AddInputFile(arg);
+                        }
+                        break;
                 }
+
+
             }
             return Out;
         }
     }
+}

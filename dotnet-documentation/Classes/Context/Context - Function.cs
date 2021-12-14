@@ -13,5 +13,16 @@ namespace DaanV2.Documentation {
 
             this.DocumentationFiles.Add(Filepath);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Filepath"></param>
+        public void SetOutputFolder(String Filepath) {
+            if (!Path.IsPathRooted(Filepath))
+                Filepath = Path.GetFullPath(Filepath);
+
+            this.OutputFolder = Filepath;
+        }
     }
 }
