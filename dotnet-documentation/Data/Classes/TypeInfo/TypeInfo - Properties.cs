@@ -12,14 +12,20 @@ namespace DaanV2.Documentation.Data {
         /// <summary> Gets or base object name </summary>
         public String ObjectName {
             get {
-                if (this.Name[0] == 'T') {
-                    return this.Name.Substring(2);
+                Char c = this.Name[0];
+                if (c == 'T') {
+                    return this.Name[2..];
                 }
 
-                Int32 Index = this.Name.LastIndexOf('.');
-                if (Index < 0) Index = this.Name.Length;
+                Int32 Index = this.Name.IndexOf('(');
 
-                return this.Name.Substring(2, Index - 2);
+                if (Index < 0) Index = this.Name.Length;
+                ReadOnlySpan<Char> Temp = this.Name.AsSpan(2, Index - 2);
+
+                Index = Temp.LastIndexOf('.');
+                if (Index < 0) Index = Temp.Length;
+
+                return Temp.Slice(0, Index).ToString();
             }
         }
     }

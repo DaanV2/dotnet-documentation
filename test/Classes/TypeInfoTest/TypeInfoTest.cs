@@ -1,16 +1,17 @@
-﻿using DaanV2.Documentation.Data;
+﻿using System;
+using DaanV2.Documentation.Data;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace test {
     [TestClass]
     public partial class TypeInfoTest {
         [TestMethod]
-        public void ObjectName() {
-            var TI = new TypeInfo { Name = "T:DaanV2.Documentation.Example" };
-            Assert.AreEqual(TI.ObjectName, "DaanV2.Documentation.Example");
-
-            TI = new TypeInfo { Name = "M:DaanV2.Documentation.Example.#ctor" };
-            Assert.AreEqual(TI.ObjectName, "DaanV2.Documentation.Example");
+        [DataRow("T:DaanV2.Documentation.Example", "DaanV2.Documentation.Example")]
+        [DataRow("M:DaanV2.Documentation.Example.#ctor", "DaanV2.Documentation.Example")]
+        [DataRow("M:DaanV2.Documentation.Factories.Example.Foo(System.Char,DaanV2.Documentation.Temple)", "DaanV2.Documentation.Factories.Example")]
+        public void ObjectName(String Name, String Result) {
+            var TI = new TypeInfo { Name = Name };
+            Assert.AreEqual(TI.ObjectName, Result);
         }
     }
 }
