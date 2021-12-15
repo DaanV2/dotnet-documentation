@@ -2,11 +2,9 @@
 
 namespace DaanV2.Documentation {
     public partial class Context {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="args"></param>
-        /// <returns></returns>
+        /// <summary> Loads the context from the given arguments. </summary>
+        /// <param name="args">The arguments.</param>
+        /// <returns>The project context</returns>
         public static Context Load(String[] args) {
             var Out = new Context();
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 namespace DaanV2.Documentation.Data {
-    ///DOLATER <summary>add description for class: TypeInfo</summary>
+    /// <summary>The class that stores type information read from xml files</summary>
     public partial class TypeInfo {
         /// <summary>Creates a new instance of <see cref="TypeInfo"/></summary>
         public TypeInfo() {

@@ -1,11 +1,9 @@
 ﻿using System;
 
 namespace DaanV2.Documentation {
-    ///DOLATER <summary>add description for interface: INameable</summary>
+    /// <summary>The interface that makes an object nameable</summary>
     public interface INameable {
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary> Gets the name of the object. </summary>
         public String Name { get; }
     }
 }

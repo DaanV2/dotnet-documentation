@@ -3,14 +3,10 @@ using System.Collections.Generic;
 
 namespace DaanV2.Documentation {
     public partial class Context {
-        /// <summary>
-        /// 
-        /// </summary>
-        public List<String> DocumentationFiles { get; set; }
+        /// <summary>Gets the documentation files.</summary>
+        public List<String> DocumentationFiles { get; private set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public String OutputFolder { get; set; }
+        /// <summary>Gets the output folder.</summary>
+        public String OutputFolder { get; private set; }
     }
 }

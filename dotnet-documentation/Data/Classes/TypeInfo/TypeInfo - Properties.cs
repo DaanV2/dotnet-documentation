@@ -3,19 +3,13 @@ using System.Collections.Generic;
 
 namespace DaanV2.Documentation.Data {
     public partial class TypeInfo : INameable {
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary> Gets or sets the name of the type </summary>
         public String Name { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary> Gets or sets the xml information </summary>
         public List<XmlInfo> XmlInfo { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
+        /// <summary> Gets or base object name </summary>
         public String ObjectName {
             get {
                 if (this.Name[0] == 'T') {

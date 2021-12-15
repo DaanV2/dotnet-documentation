@@ -26,11 +26,11 @@ namespace DaanV2.Documentation {
             }
         }
 
-        /// <summary></summary>
+        /// <summary> The AssemblyInfoConverter </summary>
         private static AssemblyInfoConverter AIConverter = new AssemblyInfoConverter();
 
         /// <summary>Reads the give file into an AssemblyInfo object</summary>
-        /// <param name="Filepath"></param>
+        /// <param name="Filepath"> The filepath to read. </param>
         public static AssemblyInfo ReadFile(String Filepath) {
             var doc = new XmlDocument();
             doc.Load(Filepath);

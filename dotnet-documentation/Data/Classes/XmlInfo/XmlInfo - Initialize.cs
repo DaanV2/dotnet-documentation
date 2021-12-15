@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace DaanV2.Documentation.Data {
-    ///DOLATER <summary>add description for class: XmlInfo</summary>
+    /// <summary>The class that stores xml information read from additional xml nodes in xml files</summary>
     public partial class XmlInfo {
         /// <summary>Creates a new instance of <see cref="XmlInfo"/></summary>
         public XmlInfo() {

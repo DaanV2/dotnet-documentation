@@ -17,7 +17,7 @@ namespace DaanV2.Documentation.Data {
         public Boolean Equals(AssemblyInfo other) {
             return other != null &&
                    this.Name == other.Name &&
-                   EqualityComparer<List<TypeInfo>>.Default.Equals(this.TypeData, other.TypeData);
+                   EqualityComparer<Dictionary<String, List<TypeInfo>>>.Default.Equals(this.TypeData, other.TypeData);
         }
 
         /// <inheritdoc/>

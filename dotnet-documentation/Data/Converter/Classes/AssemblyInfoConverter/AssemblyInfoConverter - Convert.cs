@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Xml;
 
 namespace DaanV2.Documentation.Data.Converter {
@@ -23,13 +24,23 @@ namespace DaanV2.Documentation.Data.Converter {
             while (member is not null) {
                 TypeInfo T = this.TIConverter.Convert(member);
 
-                if (T is not null) Result.TypeData.Add(T);
+                if (T is not null) {
+                    String K = T.ObjectName;
+
+                    if (!Result.TypeData.TryGetValue(K, out List<TypeInfo> Container)) {
+                        Container = new List<TypeInfo>();
+                        Result.TypeData.Add(K, Container);
+                    }
+
+                    Container.Add(T);
+                }
 
                 member = member.NextSibling;
             }
 
-
-            Result.TypeData.Sort(CompareTo);
+            foreach (KeyValuePair<String, List<TypeInfo>> item in Result.TypeData) {
+                item.Value.Sort(CompareTo);
+            }
 
             return Result;
         }
