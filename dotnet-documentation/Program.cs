@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Xml;
 using DaanV2.Documentation.Data;
 using DaanV2.Documentation.Data.Converter;
@@ -6,10 +7,22 @@ using DaanV2.Documentation.Data.Converter;
 namespace DaanV2.Documentation {
     public class Program {
         public static void Main(String[] args) {
+#if DEBUG
+            var context = new Context();
+
+            Console.WriteLine("output?");
+            context.SetOutputFolder(Console.ReadLine());
+
+            Console.WriteLine("file?");
+            context.AddInputFile(Console.ReadLine());
+#else
             var context = Context.Load(args);
+#endif
+
+            var Assemblies = new List<AssemblyInfo>(context.DocumentationFiles.Count);
 
             foreach (String file in context.DocumentationFiles) {
-                ReadFile(file);
+                Assemblies.Add(ReadFile(file));
             }
         }
 

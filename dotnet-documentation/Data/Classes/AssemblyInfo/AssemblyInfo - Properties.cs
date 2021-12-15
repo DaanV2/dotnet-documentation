@@ -11,6 +11,6 @@ namespace DaanV2.Documentation.Data {
         /// <summary>
         /// 
         /// </summary>
-        public List<TypeInfo> TypeData { get; set; }
+        public Dictionary<String, List<TypeInfo>> TypeData { get; set; }
     }
 }

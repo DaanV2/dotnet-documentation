@@ -10,8 +10,10 @@ namespace DaanV2.Documentation.Data.Converter {
         /// <returns></returns>
         public TypeInfo Convert(XmlNode element) {
             var Result = new TypeInfo {
-                Name = element.Attributes["name"].Value
+                Name = element?.Attributes?["name"]?.Value
             };
+
+            if (Result.Name is null) return null;
 
             //Loop over members
             XmlNode child = element.FirstChild;
