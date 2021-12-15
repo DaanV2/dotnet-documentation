@@ -21,7 +21,7 @@ namespace DaanV2.Documentation.Data.Converter {
             XmlNode member = members.FirstChild;
 
             while (member is not null) {
-                this.TIConverter.Convert(members);
+                this.TIConverter.Convert(member);
 
                 member = member.NextSibling;
             }

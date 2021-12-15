@@ -8,12 +8,21 @@ namespace DaanV2.Documentation.Data.Converter {
         /// </summary>
         /// <param name="element"></param>
         /// <returns></returns>
-        public TypeInfo Convert(XmlElement element) {
-          var Result = new TypeInfo();
+        public TypeInfo Convert(XmlNode element) {
+            var Result = new TypeInfo {
+                Name = element.Attributes["name"].Value
+            };
 
+            //Loop over members
+            XmlNode child = element.FirstChild;
 
+            while (child is not null) {
+                Result.XmlInfo.Add(this.XIConverter.Convert(child));
 
-          return Result;
+                child = child.NextSibling;
+            }
+
+            return Result;
         }
     }
 }

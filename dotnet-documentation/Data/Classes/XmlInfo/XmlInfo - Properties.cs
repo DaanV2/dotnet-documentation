@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 namespace DaanV2.Documentation.Data {
-    public partial class AssemblyInfo : INameable {
+    public partial class XmlInfo : INameable {
         /// <summary>
         /// 
         /// </summary>
@@ -11,6 +11,11 @@ namespace DaanV2.Documentation.Data {
         /// <summary>
         /// 
         /// </summary>
-        public List<TypeInfo> TypeData { get; set; }
+        public Dictionary<String, String> Attributes { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public String Value { get; set; }
     }
 }
