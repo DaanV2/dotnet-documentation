@@ -1,0 +1,368 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dotnet-documentation</name>
+    </assembly>
+    <members>
+        <member name="T:DaanV2.Documentation.Context">
+            <summary> The class that stores the context of project </summary>
+        </member>
+        <member name="M:DaanV2.Documentation.Context.AddInputFile(System.String)">
+            <summary> Add the given input file into the context. </summary>
+            <param name="Filepath">The filepath to add</param>
+        </member>
+        <member name="M:DaanV2.Documentation.Context.SetOutputFolder(System.String)">
+            <summary> Sets the output folder. </summary>
+            <param name="Filepath">The filepath to output the api to</param>
+        </member>
+        <member name="M:DaanV2.Documentation.Context.#ctor">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Documentation.Context"/></summary>
+        </member>
+        <member name="M:DaanV2.Documentation.Context.Load(System.String[])">
+            <summary> Loads the context from the given arguments. </summary>
+            <param name="args">The arguments.</param>
+            <returns>The project context</returns>
+        </member>
+        <member name="P:DaanV2.Documentation.Context.DocumentationFiles">
+            <summary>Gets the documentation files.</summary>
+        </member>
+        <member name="P:DaanV2.Documentation.Context.OutputFolder">
+            <summary>Gets the output folder.</summary>
+        </member>
+        <member name="T:DaanV2.Documentation.Data.AssemblyInfo">
+            <summary>The class that stores assembly information read from xml files</summary>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.AssemblyInfo.#ctor">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Documentation.Data.AssemblyInfo"/></summary>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.AssemblyInfo.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.AssemblyInfo.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.AssemblyInfo.Equals(DaanV2.Documentation.Data.AssemblyInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.AssemblyInfo.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.AssemblyInfo.op_Equality(DaanV2.Documentation.Data.AssemblyInfo,DaanV2.Documentation.Data.AssemblyInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.AssemblyInfo.op_Inequality(DaanV2.Documentation.Data.AssemblyInfo,DaanV2.Documentation.Data.AssemblyInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="P:DaanV2.Documentation.Data.AssemblyInfo.Name">
+            <summary> The name of the assembly </summary>
+        </member>
+        <member name="P:DaanV2.Documentation.Data.AssemblyInfo.TypeData">
+            <summary> Gets the types in the assembly </summary>
+        </member>
+        <member name="T:DaanV2.Documentation.Data.TypeInfo">
+            <summary>The class that stores type information read from xml files</summary>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.TypeInfo.#ctor">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Documentation.Data.TypeInfo"/></summary>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.TypeInfo.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.TypeInfo.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.TypeInfo.Equals(DaanV2.Documentation.Data.TypeInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.TypeInfo.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.TypeInfo.op_Equality(DaanV2.Documentation.Data.TypeInfo,DaanV2.Documentation.Data.TypeInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.TypeInfo.op_Inequality(DaanV2.Documentation.Data.TypeInfo,DaanV2.Documentation.Data.TypeInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="P:DaanV2.Documentation.Data.TypeInfo.Name">
+            <summary> Gets or sets the name of the type </summary>
+        </member>
+        <member name="P:DaanV2.Documentation.Data.TypeInfo.XmlInfo">
+            <summary> Gets or sets the xml information </summary>
+        </member>
+        <member name="P:DaanV2.Documentation.Data.TypeInfo.ObjectName">
+            <summary> Gets or base object name </summary>
+        </member>
+        <member name="T:DaanV2.Documentation.Data.XmlInfo">
+            <summary>The class that stores xml information read from additional xml nodes in xml files</summary>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.XmlInfo.#ctor">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Documentation.Data.XmlInfo"/></summary>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.XmlInfo.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.XmlInfo.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.XmlInfo.Equals(DaanV2.Documentation.Data.XmlInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.XmlInfo.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.XmlInfo.op_Equality(DaanV2.Documentation.Data.XmlInfo,DaanV2.Documentation.Data.XmlInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.XmlInfo.op_Inequality(DaanV2.Documentation.Data.XmlInfo,DaanV2.Documentation.Data.XmlInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="P:DaanV2.Documentation.Data.XmlInfo.Name">
+            <summary> Gets or sets the name of the xml node </summary>
+        </member>
+        <member name="P:DaanV2.Documentation.Data.XmlInfo.Attributes">
+            <summary> Gets or sets the xml node attributes information, is null if it has none </summary>
+        </member>
+        <member name="P:DaanV2.Documentation.Data.XmlInfo.Value">
+            <summary> Gets or sets the xml node value </summary>
+        </member>
+        <member name="T:DaanV2.Documentation.Data.Converter.AssemblyInfoConverter">
+            DOLATER <summary>add description for class: AssemblyInfoConverter</summary>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.Converter.AssemblyInfoConverter.Convert(System.Xml.XmlElement)">
+            <summary>
+            
+            </summary>
+            <param name="doc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.Converter.AssemblyInfoConverter.CompareTo(DaanV2.Documentation.Data.TypeInfo,DaanV2.Documentation.Data.TypeInfo)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.Converter.AssemblyInfoConverter.#ctor">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Documentation.Data.Converter.AssemblyInfoConverter"/></summary>
+        </member>
+        <member name="P:DaanV2.Documentation.Data.Converter.AssemblyInfoConverter.TIConverter">
+            <summary></summary>
+        </member>
+        <member name="T:DaanV2.Documentation.Data.Converter.TypeInfoConverter">
+            DOLATER <summary>add description for class: TypeInfoConverter</summary>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.Converter.TypeInfoConverter.Convert(System.Xml.XmlNode)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.Converter.TypeInfoConverter.#ctor">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Documentation.Data.Converter.TypeInfoConverter"/></summary>
+        </member>
+        <member name="P:DaanV2.Documentation.Data.Converter.TypeInfoConverter.XIConverter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DaanV2.Documentation.Data.Converter.XmlInfoConverter">
+            DOLATER <summary>add description for class: XmlInfoConverter</summary>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.Converter.XmlInfoConverter.Convert(System.Xml.XmlNode)">
+            <summary>
+            
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Documentation.Data.Converter.XmlInfoConverter.#ctor">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Documentation.Data.Converter.XmlInfoConverter"/></summary>
+        </member>
+        <member name="T:DaanV2.Documentation.INameable">
+            <summary>The interface that makes an object nameable</summary>
+        </member>
+        <member name="P:DaanV2.Documentation.INameable.Name">
+            <summary> Gets the name of the object. </summary>
+        </member>
+        <member name="T:DaanV2.Documentation.Markdown.AssemblyInfoWriter">
+            DOLATER <summary>add description for class: AssemblyInfoWriter</summary>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.AssemblyInfoWriter.#ctor(DaanV2.Documentation.Data.AssemblyInfo,DaanV2.Documentation.Context)">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Documentation.Markdown.AssemblyInfoWriter"/></summary>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.AssemblyInfoWriter.WriteMethod(DaanV2.Documentation.Data.TypeInfo,DaanV2.Documentation.Markdown.MarkdownWriter)">
+            <summary>
+            
+            </summary>
+            <param name="Method"></param>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.AssemblyInfoWriter.WriteTypeInfo(System.String,System.Collections.Generic.List{DaanV2.Documentation.Data.TypeInfo})">
+            <summary>
+            
+            </summary>
+            <param name="TI"></param>
+        </member>
+        <member name="T:DaanV2.Documentation.Markdown.MarkdownWriter">
+            <summary>Creates a markdown writer</summary>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.MarkdownWriter.#ctor(System.String,System.Boolean)">
+            <summary>Creates a new instance of <see cref="T:DaanV2.Documentation.Markdown.MarkdownWriter"/></summary>
+            <param name="Filepath"> The filepath to the output file </param>
+            <param name="append"> If true, the file will be appended </param>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.MarkdownWriter.Finalize">
+            <summary> Closes the writer </summary>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.MarkdownWriter.Close">
+            <summary> Closes the writer </summary>
+        </member>
+        <member name="F:DaanV2.Documentation.Markdown.MarkdownWriter._Writer">
+            <summary>The writer to write to</summary>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.MarkdownWriter.WriteHeader(System.String,System.Int32)">
+            <summary> Writer a title to the output </summary>
+            <param name="Header">The title to write</param>
+            <param name="Level">The level of the title</param>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.MarkdownWriter.WriteTableHeader(System.String[])">
+            <summary> Writer a table title to the output </summary>
+            <param name="Colomns"> The colomns of the table </param>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.MarkdownWriter.WriteTableRow(System.String[])">
+            <summary> Writes a table row to the output </summary>
+            <param name="Colomns"> The colomns of the row </param>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.MarkdownWriter.WriteSeperator">
+            <summary> Writes a seperator to the output </summary>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.MarkdownWriter.WriteHighLighted(System.String)">
+            <summary> Writes a seperator to the output </summary>
+            <param name="Text">The text to write</param>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.MarkdownWriter.WriteLink(System.String,System.String)">
+            <summary> Writes a seperator to the output </summary>
+            <param name="Text">The text to write</param>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.MarkdownWriter.WriteStartCodeBlock">
+            <summary> Writes a start code block to the output </summary>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.MarkdownWriter.WriteStartCodeBlock(System.String)">
+            <summary> Writes a end code block to the output </summary>
+            <param name="Code">The language of the code block</param>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.MarkdownWriter.WriteEndCodeBlock">
+            <summary> Writes a end code block to the output </summary>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.MarkdownWriter.Write(System.String)">
+            <summary> Writes the text to the output </summary>
+            <param name="Text">The text to write</param>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.MarkdownWriter.WriteEndLine">
+            <summary> Writes the text to the output </summary>
+            <param name="Text">The text to write</param>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.MarkdownWriter.WriteLine(System.String)">
+            <summary> Writes the text to the output and adds a markdown ending</summary>
+            <param name="Text">The text to write</param>
+        </member>
+        <member name="T:DaanV2.Documentation.Markdown.Extension">
+            DOLATER <summary>add description for class: Extension</summary>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.Extension.GetFolderPath(DaanV2.Documentation.Data.AssemblyInfo,DaanV2.Documentation.Context)">
+            <summary> Gets the path to the folder of the assembly </summary>
+            <param name="AIInfo"> The assembly information </param>
+            <param name="context"> The context </param>
+            <returns> The folder path </returns>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.Extension.GetFilepath(DaanV2.Documentation.Data.TypeInfo,System.String,DaanV2.Documentation.Context)">
+            <summary> Gets the filepath to the output document </summary>
+            <param name="AIInfo"> The assembly information </param>
+            <param name="context"> The context </param>
+            <param name="TInfo"> The type information </param>
+            <returns> The filepath </returns>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.Extension.GetNamespace(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="FullType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.Extension.GetTypeName(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="FullType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.Extension.GetInfo(DaanV2.Documentation.Data.TypeInfo)">
+            <summary>
+            
+            </summary>
+            <param name="FullType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.Extension.GetInfo(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="FullType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.Extension.GetMethodName(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.Extension.GetSyntax(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.Extension.ForAll(System.Collections.Generic.List{DaanV2.Documentation.Data.XmlInfo},System.String,System.Action{System.Collections.Generic.List{DaanV2.Documentation.Data.XmlInfo}})">
+            <summary>
+            
+            </summary>
+            <param name="info"></param>
+            <param name="Name"></param>
+            <param name="action"></param>
+        </member>
+        <member name="T:DaanV2.Documentation.Markdown.NameCorrector">
+            DOLATER <summary>add description for class: NameCorrector</summary>
+        </member>
+        <member name="M:DaanV2.Documentation.Markdown.NameCorrector.MethodName(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Method"></param>
+            <returns></returns>
+        </member>
+        <member name="F:DaanV2.Documentation.Program.AIConverter">
+            <summary> The AssemblyInfoConverter </summary>
+        </member>
+        <member name="M:DaanV2.Documentation.Program.ReadFile(System.String)">
+            <summary>Reads the give file into an AssemblyInfo object</summary>
+            <param name="Filepath"> The filepath to read. </param>
+        </member>
+        <member name="M:DaanV2.Documentation.Extension.GetSingle``1(System.Collections.Generic.List{``0},System.String)">
+            <summary> Retrieves the object with the matching name. </summary>
+            <typeparam name="T"> The type of object to retrieve. </typeparam>
+            <param name="Items"> The list of items to search through. </param>
+            <param name="Name"> The name of the object to retrieve. </param>
+            <returns> The object with the matching name. or default / null</returns>
+        </member>
+        <member name="M:DaanV2.Documentation.Extension.GetAll``1(System.Collections.Generic.List{``0},System.String)">
+            <summary> Retrieves the objects with the matching name. </summary>
+            <typeparam name="T"> The type of object to retrieve. </typeparam>
+            <param name="Items"> The list of items to search through. </param>
+            <param name="Name"> The name of the object to retrieve. </param>
+            <returns> The objects with the matching name. or default / null</returns>
+        </member>
+    </members>
+</doc>

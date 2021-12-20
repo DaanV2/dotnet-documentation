@@ -7,4 +7,12 @@
     <StartupObject>DaanV2.Documentation.Program</StartupObject>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>dotnet-documentation.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>dotnet-documentation.xml</DocumentationFile>
+  </PropertyGroup>
+
 </Project>

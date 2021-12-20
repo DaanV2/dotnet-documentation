@@ -6,7 +6,7 @@ namespace DaanV2.Documentation.Markdown {
         /// <param name="Header">The title to write</param>
         /// <param name="Level">The level of the title</param>
         public void WriteHeader(String Header, Int32 level = 0) {
-            this.WriteLine(new String('#', level + 1) + " " + Header);
+            this.Write(new String('#', level + 1) + " " + Header + "\n\n");
         }
 
         /// <summary> Writer a table title to the output </summary>
@@ -65,6 +65,12 @@ namespace DaanV2.Documentation.Markdown {
         /// <param name="Text">The text to write</param>
         public void Write(String Text) {
             this._Writer.Write(Text);
+        }
+
+        /// <summary> Writes the text to the output </summary>
+        /// <param name="Text">The text to write</param>
+        public void WriteEndLine() {
+            this._Writer.Write("  \n");
         }
 
         /// <summary> Writes the text to the output and adds a markdown ending</summary>

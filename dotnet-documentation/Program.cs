@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Xml;
 using DaanV2.Documentation.Data;
 using DaanV2.Documentation.Data.Converter;
+using DaanV2.Documentation.Markdown;
 
 namespace DaanV2.Documentation {
     public class Program {
@@ -23,6 +24,11 @@ namespace DaanV2.Documentation {
 
             foreach (String file in context.DocumentationFiles) {
                 Assemblies.Add(ReadFile(file));
+            }
+
+            foreach (AssemblyInfo AInfo in Assemblies) {
+                var AssemblyWriter = new AssemblyInfoWriter(AInfo, context);
+                AssemblyWriter.Write();
             }
         }
 

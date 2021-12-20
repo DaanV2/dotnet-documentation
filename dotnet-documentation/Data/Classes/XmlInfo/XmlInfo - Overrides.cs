@@ -5,7 +5,7 @@ namespace DaanV2.Documentation.Data {
     public partial class XmlInfo : IEquatable<XmlInfo> {
         /// <inheritdoc/>
         public override String ToString() {
-            return $"{this.Name}[{this.Attributes.Count}]: {this.Value}";
+            return $"{this.Name}[{this.Attributes?.Count}]: {this.Value}";
         }
 
         /// <inheritdoc/>

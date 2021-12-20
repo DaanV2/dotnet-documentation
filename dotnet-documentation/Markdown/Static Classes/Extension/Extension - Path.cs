@@ -42,8 +42,8 @@ namespace DaanV2.Documentation.Markdown {
         /// <param name="FullType"></param>
         /// <returns></returns>
         public static String GetTypeName(String FullType) {
-            Int32 LastIndex = FullType.IndexOf('.');
-            if (LastIndex >= 0) return FullType[(LastIndex + 1)..];
+            Int32 Index = FullType.LastIndexOf('.');
+            if (Index >= 0) return FullType[(Index + 1)..];
 
             return FullType;
         }
@@ -66,13 +66,51 @@ namespace DaanV2.Documentation.Markdown {
         /// <param name="FullType"></param>
         /// <returns></returns>
         public static (String Namespace, String TypeName) GetInfo(String FullType) {
-            Int32 Index = FullType.IndexOf('.');
+            Int32 Index = FullType.LastIndexOf('.');
 
             if (Index >= 0) {
                 return (FullType[0..Index], FullType[(Index + 1)..]);
             }
 
             return (FullType, FullType);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public static String GetMethodName(String name) {
+            Int32 Index = name.IndexOf('(');
+
+            if (Index < 0) Index = name.Length;
+
+            ReadOnlySpan<Char> temp = name.AsSpan(0, Index);
+            Index = temp.LastIndexOf('.') + 1;
+
+            return temp[Index..].ToString();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Name"></param>
+        /// <returns></returns>
+        public static String GetSyntax(String Name) {
+            Int32 Index = Name.IndexOf('(');
+
+            if (Index < 0) return String.Empty;
+
+            ReadOnlySpan<Char> temp = Name.AsSpan(0, Index);
+            Int32 StartIndex = temp.LastIndexOf('.') + 1;
+
+            if (StartIndex < 0) StartIndex = 0;
+
+            temp = Name.AsSpan(StartIndex);
+            Index = temp.LastIndexOf(')');
+            if (Index < 0) return temp.ToString();
+
+            return temp[..(Index+1)].ToString();
         }
     }
 }
